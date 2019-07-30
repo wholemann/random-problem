@@ -1,7 +1,9 @@
-import {randInt} from './util';
+import { randInt } from './util';
 
 test('randInt', () => {
-  for(let i=0; i < 100; i++){
-    expect(randInt(10) < 10).toBe(true);
-  }
+  const NUMBER = 10;
+
+  [...Array(NUMBER * 10)].forEach(() => {
+    expect(randInt(NUMBER)).toBeLessThan(NUMBER);
+  });
 });
