@@ -1,6 +1,19 @@
-# random-problem
+# Random Problem Proposer
 
+## Install dependencies
+
+```bash
+npm ci
 ```
-$> yarn
-$> yarn start
+
+## Run server
+
+```bash
+npm start
+```
+
+## Run test
+
+```bash
+npm test
 ```
