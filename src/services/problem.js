@@ -1,4 +1,4 @@
-import {randInt} from '../util/util';
+import { randInt } from '../util/util';
 
 const PROBLEMS_URL = 'https://spreadsheets.google.com/feeds/list/1tT8Mv43LzCdJSh_nREbAXvBTjFlUL8Vl0zLewhaJpu4/od6/public/values?alt=json';
 
