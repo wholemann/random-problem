@@ -1,4 +1,4 @@
-import {randInt} from '../util/util';
+import { randInt } from '../util/util';
 
 const state = {
   problems: [],
@@ -17,7 +17,7 @@ export const loadProblems = async () => {
   const url = 'https://jsonplaceholder.typicode.com/todos';
   const response = await fetch(url);
   const data = await response.json();
-  data.forEach(item => {
+  data.forEach((item) => {
     addProblem(item.title);
   });
 };

@@ -17,3 +17,9 @@ npm start
 ```bash
 npm test
 ```
+
+## Lint and fix all
+
+```bash
+npm run lint
+```

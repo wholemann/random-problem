@@ -1,4 +1,4 @@
-import { getTitle, addProblem } from "./problem";
+import { getTitle, addProblem } from './problem';
 
 test('getTitle', () => {
   const titles = [
@@ -6,7 +6,7 @@ test('getTitle', () => {
     'YouTube problem',
   ];
 
-  titles.forEach(title => {
+  titles.forEach((title) => {
     addProblem(title);
   });
 
