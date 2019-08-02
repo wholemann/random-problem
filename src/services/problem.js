@@ -1,5 +1,7 @@
 import { randInt } from '../util/util';
 
+const PROBLEMS_URL = 'https://spreadsheets.google.com/feeds/list/1tT8Mv43LzCdJSh_nREbAXvBTjFlUL8Vl0zLewhaJpu4/od6/public/values?alt=json';
+
 const state = {
   problems: [],
 };
@@ -14,10 +16,11 @@ export const addProblem = (title) => {
 };
 
 export const loadProblems = async () => {
-  const url = 'https://jsonplaceholder.typicode.com/todos';
-  const response = await fetch(url);
+  const response = await fetch(PROBLEMS_URL);
   const data = await response.json();
-  data.forEach((item) => {
-    addProblem(item.title);
+  const { feed: { entry: items } } = data;
+  items.forEach(item => {
+    const { gsx$title: { $t: title } } = item;
+    addProblem(title);
   });
 };
