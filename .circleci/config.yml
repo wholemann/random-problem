@@ -37,8 +37,9 @@ jobs:
       - run: |
           npm test
           npm run build
+          zip build.zip build/*
           mkdir /tmp/artifacts
-          mv build/* /tmp/artifacts
+          mv build.zip /tmp/artifacts
 
       - store_artifacts:
           path: /tmp/artifacts
